@@ -1,14 +1,34 @@
 import React from "react";
-import styles from "./style.css";
+import mui from 'material-ui';
+import SearchBox from '../../components/Search/SearchBox.js';
 
+class HomePage extends React.Component {
+  constructor(){
+    super();
+  }
 
-export default class HomePage extends React.Component {
+  //  <ListingList />
   render() {
     return (
-      <div className={styles.content}>
-        <h1>Home Page</h1>
-        <p className={styles.welcomeText}>Thanks for joining!</p>
+    <div style={styles.mainDiv}>
+      <div style={styles.searchRow}>
+          <SearchBox {...this.props} />
       </div>
+    </div>
     );
   }
 }
+
+export default HomePage;
+
+var styles = {
+  mainDiv: {
+    width: 1200,
+    margin: '20px auto'
+  },
+  searchRow: {
+      display: 'flex',
+      flexFlow: 'row',
+      margin: '20px auto'
+  },
+};

@@ -9,7 +9,7 @@ import DissatisfiedIcon from '../../../common/svg/sentimentDissatisfied';
 var {ListItem, Avatar} = mui;
 const colors = mstyles.Colors;
 
-var {ListItem, Avatar, Card, CardActions, CardHeader, CardTitle, CardText, FlatButton, CardText } = mui;
+var {ListItem, Avatar, Card, CardText } = mui;
 
 class Listing extends React.Component {
   constructor(props){

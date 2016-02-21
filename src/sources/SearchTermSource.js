@@ -21,7 +21,7 @@ let SearchTermSource = {
 
         setTimeout(function () {
           resolve(mockData);
-        }, 7000);
+        }, 100);
       });
     },
     success: Actions.searchTermsReceived,

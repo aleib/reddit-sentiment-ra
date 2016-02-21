@@ -1,7 +1,7 @@
 import Actions from '../actions';
 import request from 'superagent';
-import mockcomments from '../../test/data/comments.js';
-import mocksentiment from '../../test/data/sentiment.js';
+import mockcomments from './mockdata/comments.js';
+import mocksentiment from './mockdata/sentiment.js';
 
 let CommentSource = {
   getComments: {

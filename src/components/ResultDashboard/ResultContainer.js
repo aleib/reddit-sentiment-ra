@@ -64,9 +64,10 @@ class ResultContainer extends React.Component {
              </Tab>
              <Tab icon={<ChartIcon />} >
                <div className="lineChart">
+                  <div style={styles.testMsg}>Test D3 chart, not useful yet...</div>
                    <LineChart
                       width={800}
-                      height={250}
+                      height={214}
                       data={lineData}
                     />
                </div>
@@ -86,5 +87,8 @@ var styles = {
   mainCard: {
     marginLeft: 30,
     width: 970
+  },
+  testMsg: {
+    margin: '10px'
   }
 };

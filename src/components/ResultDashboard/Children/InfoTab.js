@@ -16,7 +16,6 @@ import NeutralIcon from '../../../common/svg/sentimentNeutral';
 import DissatisfiedIcon from '../../../common/svg/sentimentDissatisfied';
 
 var {List, ListItem} = mui;
-var themeColors = theme.palette;
 
 class ResultContainer extends React.Component {
   constructor(props){

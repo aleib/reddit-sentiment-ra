@@ -14,7 +14,6 @@ import ListIcon from 'material-ui/lib/svg-icons/action/list';
 import SearchIcon from 'material-ui/lib/svg-icons/action/search';
 
 var {List, Card, Divider } = mui;
-var themeColors = theme.palette;
 
 class SearchContainer extends React.Component {
   constructor(props){

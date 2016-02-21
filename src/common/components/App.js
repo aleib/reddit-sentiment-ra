@@ -4,7 +4,6 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import ThemeConfig from '../theme-config';
 import IconButton from 'material-ui/lib/icon-button';
 
-var Colors = mui.Styles.Colors;
 var AppBar = mui.AppBar;
 
 class App extends React.Component {

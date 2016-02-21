@@ -12,7 +12,7 @@ import Progress from '../../../common/components/Progress';
 import Listing from './Listing.js';
 import CommentIcon from 'material-ui/lib/svg-icons/communication/comment';
 
-var {Card, List, CardHeader, CardActions, FlatButton, RaisedButton, DatePicker, TimePicker, Divider } = mui;
+var { RaisedButton, DatePicker } = mui;
 const colors = mstyles.Colors;
 
 class CommentOptions extends React.Component {

@@ -1,13 +1,7 @@
 {
-  "name": "Essential React",
-  "description": "A minimal skeleton for building testable React apps using ES6",
-  "keywords": [
-    "react",
-    "es6",
-    "starter"
-  ],
-  "repository": "https://github.com/pheuter/essential-react",
-  "logo": "https://dl.dropboxusercontent.com/u/1803181/essential-react-logo.png",
+  "name": "Sentimental",
+  "description": "Sentiment Analysis for Reddit Comments",
+  "repository": "https://github.com/aleib/reddit-sentiment-ra",
   "env": {
     "PRODUCTION": "true",
     "NPM_CONFIG_PRODUCTION": "false"

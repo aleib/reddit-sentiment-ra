@@ -14,7 +14,7 @@ import theme from '../../common/theme-config';
 //Icons
 import CommentIcon from 'material-ui/lib/svg-icons/communication/comment';
 
-var {Card, List, CardHeader, CardActions, FlatButton, Divider } = mui;
+var {Card, List, CardHeader, Divider } = mui;
 var themeColors = theme.palette;
 
 //Reddit Comments

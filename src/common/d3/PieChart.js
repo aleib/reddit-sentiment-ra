@@ -14,7 +14,6 @@ class PieChart extends React.Component {
     var {width, height, data, colorRange} = this.props
 
     var radius = Math.min(width, height) / 2;
-    var margin = {top: 20, right: 20, bottom: 30, left: 50};
     colorRange = colorRange != null ? colorRange : ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"];
     var color = d3.scale.ordinal().range(colorRange);
 

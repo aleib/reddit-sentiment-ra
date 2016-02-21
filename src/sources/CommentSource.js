@@ -25,7 +25,7 @@ let CommentSource = {
         if(fromWhen)
           url += "&after=" + fromWhen;
 
-        if(true){
+        if(false){
           setTimeout(function(){resolve({term: term, res: mockcomments})},100);
         } else {
           request
@@ -89,7 +89,7 @@ let CommentSource = {
   getSentimentBatch: {
     remote(state, comments){
       return new Promise((resolve, reject) => {
-        if(true){
+        if(false){
           setTimeout(function(){resolve(mocksentiment);},100);
         } else {
           let url = `http://sentiment.vivekn.com/api/batch/`;

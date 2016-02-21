@@ -34,8 +34,7 @@ class LimitDropDown extends React.Component {
           <MenuItem value={10} primaryText="10"/>
           <MenuItem value={50} primaryText="50"/>
           <MenuItem value={100} primaryText="100"/>
-          <MenuItem value={200} primaryText="100"/>
-          <MenuItem value={1000} primaryText="1000"/>
+          <MenuItem value={200} primaryText="200"/>
         </DropDownMenu>
       </div>
     );

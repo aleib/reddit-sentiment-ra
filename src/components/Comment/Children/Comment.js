@@ -1,10 +1,10 @@
 import React from 'react';
 import mui from 'material-ui';
-import cs from "./style.css";
+import cs from "../style.css";
 import mstyles from 'material-ui/lib/styles';
-import SatisfiedIcon from '../../common/svg/sentimentSatisfied';
-import NeutralIcon from '../../common/svg/sentimentNeutral';
-import DissatisfiedIcon from '../../common/svg/sentimentDissatisfied';
+import SatisfiedIcon from '../../../common/svg/sentimentSatisfied';
+import NeutralIcon from '../../../common/svg/sentimentNeutral';
+import DissatisfiedIcon from '../../../common/svg/sentimentDissatisfied';
 
 var {ListItem, Avatar} = mui;
 const colors = mstyles.Colors;

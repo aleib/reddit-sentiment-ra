@@ -3,17 +3,17 @@ import mui from 'material-ui';
 import _ from 'lodash';
 import moment from 'moment'
 import Colors from 'material-ui/lib/styles/colors';
-import PieChart from '../../common/d3/PieChart'
-import theme from '../../common/theme-config';
-import Actions from '../../actions';
+import PieChart from '../../../common/d3/PieChart'
+import theme from '../../../common/theme-config';
+import Actions from '../../../actions';
 
 //Icons
 import InfoIcon from 'material-ui/lib/svg-icons/action/info-outline';
 import SearchIcon from 'material-ui/lib/svg-icons/action/search';
 import NumberIcon from 'material-ui/lib/svg-icons/editor/format-list-numbered';
-import SatisfiedIcon from '../../common/svg/sentimentSatisfied';
-import NeutralIcon from '../../common/svg/sentimentNeutral';
-import DissatisfiedIcon from '../../common/svg/sentimentDissatisfied';
+import SatisfiedIcon from '../../../common/svg/sentimentSatisfied';
+import NeutralIcon from '../../../common/svg/sentimentNeutral';
+import DissatisfiedIcon from '../../../common/svg/sentimentDissatisfied';
 
 var {List, ListItem} = mui;
 var themeColors = theme.palette;
@@ -56,14 +56,25 @@ class ResultContainer extends React.Component {
       <div style={styles.infoDiv}>
           <div style={styles.innerInfoDiv}>
             <List>
-              <ListItem primaryText={searchTerm} disabled={true} leftIcon={<SearchIcon />} />
-              <ListItem primaryText={total} leftIcon={<NumberIcon />}
+              <ListItem primaryText={searchTerm}
+                disabled={true}
+                leftIcon={<SearchIcon />}
+                innerDivStyle={styles.infoListItem} />
+              <ListItem primaryText={total}
+                leftIcon={<NumberIcon />}
+                innerDivStyle={styles.infoListItem}
                 onClick={this.toggleFilterOption.bind('showAll')} />
-              <ListItem primaryText={pos} leftIcon={<SatisfiedIcon />}
+              <ListItem primaryText={pos}
+                leftIcon={<SatisfiedIcon />}
+                innerDivStyle={styles.infoListItem}
                 onClick={this.toggleFilterOption.bind('showPositive')} />
-              <ListItem primaryText={neu} leftIcon={<NeutralIcon />}
+              <ListItem primaryText={neu}
+                leftIcon={<NeutralIcon />}
+                innerDivStyle={styles.infoListItem}
                 onClick={this.toggleFilterOption.bind('showNeutral')} />
-              <ListItem primaryText={neg} leftIcon={<DissatisfiedIcon />}
+              <ListItem primaryText={neg}
+                leftIcon={<DissatisfiedIcon />}
+                innerDivStyle={styles.infoListItem}
                 onClick={this.toggleFilterOption.bind('showNegative')} />
             </List>
           </div>
@@ -84,12 +95,16 @@ export default ResultContainer;
 
 var styles = {
   infoDiv: {
-      margin: '10px 20px'
+      margin: '10px 20px 10px 30px'
     },
   innerInfoDiv: {
       width: '50%',
       display: 'inline-block',
+      verticalAlign: 'top'
     },
+  infoListItem: {
+    padding: '16px 16px 12px 66px',
+  },
   pieDiv: {
       width: '50%',
       display: 'inline-block'

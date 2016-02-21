@@ -5,8 +5,8 @@ import mui from 'material-ui';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import SearchTermStore from '../../stores/SearchTermStore';
 import CommentStore from '../../stores/CommentStore';
-import SearchOptions from './children/SearchOptions';
-import SearchInput from './children/SearchInput';
+import SearchOptions from './Children/SearchOptions';
+import SearchInput from './Children/SearchInput';
 import Progress from '../../common/components/Progress';
 import theme from '../../common/theme-config';
 

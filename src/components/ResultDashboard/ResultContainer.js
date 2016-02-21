@@ -7,8 +7,8 @@ import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';
 import LineChart from '../../common/d3/LineChart';
 //import BubbleChart from '../../common/d3/BubbleChart';
-import MessageCard from './MessageCard';
-import InfoTab from './InfoTab'
+import MessageCard from './Children/MessageCard';
+import InfoTab from './Children/InfoTab'
 
 //Icons
 import InfoIcon from 'material-ui/lib/svg-icons/action/info-outline';
@@ -53,12 +53,8 @@ class ResultContainer extends React.Component {
           y: d.confidenceNum };
       });
 
-        // var data = this.props.data.map(d => ({
-        //   _id: d._id,
-        //   value: d.value,
-        //   colorValue: d.sentiment,
-        //   selected: d.selected
-        // }));
+      //TODO: D3 Bubble Chart, need to implement different sentiment analysis to get word associations
+      //var bubbleData = this.props.data.map(d => ({ _id: d._id, value: d.value, colorValue: d.sentiment, selected: d.selected }));
 
       return (
         <Card style={styles.mainCard}>

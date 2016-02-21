@@ -1,5 +1,4 @@
 import React from 'react';
-import Comment from './Comment.js';
 import mui from 'material-ui';
 import Colors from 'material-ui/lib/styles/colors';
 import _ from 'lodash';
@@ -7,10 +6,13 @@ import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';
 import cstyles from "./style.css";
 import Progress from '../../common/components/Progress';
-import Listing from './Listing.js';
-import CommentOptions from './CommentOptions';
-import CommentIcon from 'material-ui/lib/svg-icons/communication/comment';
+import Listing from './Children/Listing.js';
+import Comment from './Children/Comment.js';
+import CommentOptions from './Children/CommentOptions';
 import theme from '../../common/theme-config';
+
+//Icons
+import CommentIcon from 'material-ui/lib/svg-icons/communication/comment';
 
 var {Card, List, CardHeader, CardActions, FlatButton, Divider } = mui;
 var themeColors = theme.palette;

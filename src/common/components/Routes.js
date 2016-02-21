@@ -7,6 +7,8 @@ import HomePage from '../../pages/home/page';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="search/:term" handler={HomePage} />
+    <Route path="search" component={HomePage}>
+      <Route path="/:term" component={HomePage}/>
+    </Route>
   </Route>
 );

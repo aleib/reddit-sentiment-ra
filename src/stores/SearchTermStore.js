@@ -1,6 +1,7 @@
 import alt from '../alt';
 import Actions from '../actions';
 import SearchTermSource from '../sources/SearchTermSource';
+import CommentSource from '../sources/CommentSource';
 import _ from 'lodash';
 
 class SearchTermStore {
@@ -9,16 +10,18 @@ class SearchTermStore {
       termSelected: Actions.termSelected,
       searchingTerms: Actions.searchingTerms,
       searchTermsReceived: Actions.searchTermsReceived,
+      termSelected: Actions.termSelected,
       updateOptions: Actions.updateOptions
     });
 
     this.registerAsync(SearchTermSource);
+    this.registerAsync(CommentSource);
 
     this.state = {
       searchTerms: [],
       searchingTerms: false,
       selectedTerm: null,
-      limitCount: 10,
+      limitCount: 50,
       fromWhen: "all"
     };
   }
@@ -42,9 +45,9 @@ class SearchTermStore {
     this.setState({
       selectedTerm: selectedTerm,
       searchTerms: this.state.searchTerms,
-      //messagesDirty: true
     });
 
+    setTimeout(this.getInstance().getComments(selectedTerm), 100);
   }
 
   searchTermsReceived(terms){
@@ -62,6 +65,7 @@ class SearchTermStore {
       searchingTerms: false
     });
 
+    setTimeout(this.getInstance().getComments, 100);
   }
 
   updateOptions(options){

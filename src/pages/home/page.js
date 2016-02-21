@@ -1,6 +1,7 @@
 import React from "react";
 import mui from 'material-ui';
 import SearchBox from '../../components/Search/SearchBox.js';
+import ResultContainer from '../../components/ResultDashboard/ResultContainer.js';
 
 class HomePage extends React.Component {
   constructor(){
@@ -13,6 +14,7 @@ class HomePage extends React.Component {
     <div style={styles.mainDiv}>
       <div style={styles.searchRow}>
           <SearchBox {...this.props} />
+          <ResultContainer />
       </div>
     </div>
     );

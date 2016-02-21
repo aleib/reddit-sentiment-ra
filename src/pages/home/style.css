@@ -6,35 +6,3 @@
   font-size: 20px;
   color: #7F7F7F;
 }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.line {
-  fill: steelblue;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-
-.visitors .sparkline {
-      fill: steelblue;
-      stroke: steelblue;
-      stroke-width: 1.5px;
-  }
-
-  .arc text {
-    font: 10px sans-serif;
-    text-anchor: middle;
-  }
-
-  .arc path {
-    stroke: #fff;
-  }

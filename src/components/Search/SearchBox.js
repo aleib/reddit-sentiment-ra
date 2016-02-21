@@ -1,36 +1,35 @@
 import React from "react";
-import Actions from '../../actions';
-import _ from 'lodash';
-import mui from 'material-ui';
 import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
 import FloatingActionButton from 'material-ui/lib/floating-action-button';
+import Actions from '../../actions';
+import _ from 'lodash';
+import mui from 'material-ui';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import SearchTermStore from '../../stores/SearchTermStore';
+import CommentStore from '../../stores/CommentStore';
+import SearchTermList from '../../components/Search/SearchTermList.js';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import SearchOptions from './SearchOptions';
 import Progress from '../../common/components/Progress';
+import theme from '../../common/theme-config';
 
 import ListIcon from 'material-ui/lib/svg-icons/action/list';
 import SearchIcon from 'material-ui/lib/svg-icons/action/search';
 
 var {List, ListItem, Card, DropDownMenu, Divider } = mui;
-
-const style = {
-  searchBtn: {
-    marginLeft: 20
-  },
-  searchIcon: {
-      marginLeft: 10
-  }
-};
+var themeColors = theme.palette;
 
 class SearchBox extends React.Component {
   constructor(props){
       super(props);
+      this.state = {
+        searchBoxSearchTerm: '',
+      };
   }
 
   static getStores(){
-    return [SearchTermStore];
+    return [SearchTermStore, CommentStore];
   }
 
   static getPropsFromStores(){
@@ -58,6 +57,28 @@ class SearchBox extends React.Component {
     }
   }
 
+  searchButtonEvent(e){
+    if(this.state.searchBoxSearchTerm){
+      var data = {
+        searchTerm: this.state.searchBoxSearchTerm,
+        limitCount: this.props.limitCount,
+        fromWhen: this.props.fromWhen,
+      };
+      CommentStore.getComments(data);
+    }
+  }
+
+  searchEnterEvent(e){
+    if (e.key === "Enter") {
+      var data = {
+        searchTerm: this.state.searchBoxSearchTerm,
+        limitCount: this.props.limitCount,
+        fromWhen: this.props.fromWhen,
+      };
+      CommentStore.getComments(data);
+    }
+  }
+
   handleSearchTermChange = (event) => {
     this.setState({ searchBoxSearchTerm: event.target.value })
   };
@@ -70,12 +91,13 @@ class SearchBox extends React.Component {
     return (
       <Card style={styles.searchCard}>
         <div>
-         <List>
+         <List style={styles.searchList}>
            <ListItem
               primaryText="Search"
-              leftIcon={<SearchIcon />}
+              leftIcon={<SearchIcon color={themeColors.alternateTextColor} />}
               disabled={true}
               initiallyOpen={true}
+              style={styles.search}
               nestedItems={[
                 <ListItem
                   key={1}
@@ -86,15 +108,18 @@ class SearchBox extends React.Component {
                     value={this.state.searchBoxSearchTerm}
                     onChange={this.handleSearchTermChange.bind(this)}
                     hintText="Term: eg. Micosoft"
+                    onKeyDown={this.searchEnterEvent.bind(this)}
                     style={styles.textField} />
                   <FloatingActionButton
                     mini={true}
-                    style={style.searchIcon}>
+                    style={styles.searchIcon}
+                    onClick={this.searchButtonEvent.bind(this)}>
                       <SearchIcon />
                     </FloatingActionButton>
                 </ListItem>
              ]} />
            <Divider />
+           <SearchOptions />
          </List>
         </div>
       </Card>
@@ -107,17 +132,34 @@ class SearchBox extends React.Component {
 export default connectToStores(SearchBox);
 
 var styles = {
+  search: {
+    backgroundColor: themeColors.primary1Color,
+    color: themeColors.alternateTextColor
+  },
+  searchList: {
+    paddingTop: 0,
+    paddingBottom: 0
+  },
   searchInnerDiv: {
     marginLeft: 10,
     paddingTop: 0
   },
   progressCard: {
-    flexGrow: 1
+
   },
   searchCard: {
-      width: '300px'
+      width: '330px',
+      flex: '0 0 330px'
   },
   textField: {
-    width: 180
+    width: 210
+  },
+  searchBtn: {
+    marginLeft: 20
+  },
+  searchIcon: {
+      marginLeft: 20,
+      position: 'relative',
+      top: 10
   }
 };

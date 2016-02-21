@@ -42,12 +42,12 @@ class LineChart extends React.Component {
      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
 
-    var parseDate = d3.time.format('%d-%b-%y').parse
-
-     data.forEach(function (d) {
-       //d.x = parseDate(d.x)
-       d.y = +d.y
-     })
+    // var parseDate = d3.time.format('%d-%b-%y').parse
+    //
+    //  data.forEach(function (d) {
+    //    d.x = parseDate(d.x)
+    //    d.y = +d.y
+    //  })
 
      x.domain(d3.extent(data, function (d) { return d.x }))
      y.domain(d3.extent(data, function (d) { return d.y }))

@@ -1,8 +1,8 @@
 import React from 'react';
-import Actions from '../../actions';
+import Actions from '../../../actions';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import SearchTermStore from '../../stores/SearchTermStore';
+import SearchTermStore from '../../../stores/SearchTermStore';
 import connectToStores from 'alt-utils/lib/connectToStores';
 
 class FromDropDown extends React.Component {

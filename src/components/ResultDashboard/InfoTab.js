@@ -3,8 +3,9 @@ import mui from 'material-ui';
 import _ from 'lodash';
 import moment from 'moment'
 import Colors from 'material-ui/lib/styles/colors';
-import PieChart from '../D3/PieChart'
+import PieChart from '../../common/d3/PieChart'
 import theme from '../../common/theme-config';
+import Actions from '../../actions';
 
 //Icons
 import InfoIcon from 'material-ui/lib/svg-icons/action/info-outline';
@@ -20,6 +21,13 @@ var themeColors = theme.palette;
 class ResultContainer extends React.Component {
   constructor(props){
     super(props);
+  }
+
+  toggleFilterOption(e){
+    var option = this;
+    if(option){
+        Actions.updateCommentFilterOptions({toggle: option});
+    }
   }
 
   render(){
@@ -48,11 +56,15 @@ class ResultContainer extends React.Component {
       <div style={styles.infoDiv}>
           <div style={styles.innerInfoDiv}>
             <List>
-              <ListItem primaryText={searchTerm} leftIcon={<SearchIcon />} />
-              <ListItem primaryText={total} leftIcon={<NumberIcon />} />
-              <ListItem primaryText={pos} leftIcon={<SatisfiedIcon />} />
-              <ListItem primaryText={neu} leftIcon={<NeutralIcon />} />
-              <ListItem primaryText={neg} leftIcon={<DissatisfiedIcon />} />
+              <ListItem primaryText={searchTerm} disabled={true} leftIcon={<SearchIcon />} />
+              <ListItem primaryText={total} leftIcon={<NumberIcon />}
+                onClick={this.toggleFilterOption.bind('showAll')} />
+              <ListItem primaryText={pos} leftIcon={<SatisfiedIcon />}
+                onClick={this.toggleFilterOption.bind('showPositive')} />
+              <ListItem primaryText={neu} leftIcon={<NeutralIcon />}
+                onClick={this.toggleFilterOption.bind('showNeutral')} />
+              <ListItem primaryText={neg} leftIcon={<DissatisfiedIcon />}
+                onClick={this.toggleFilterOption.bind('showNegative')} />
             </List>
           </div>
           <div style={styles.pieDiv}>

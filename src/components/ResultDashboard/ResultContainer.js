@@ -2,9 +2,11 @@ import React from 'react';
 import mui from 'material-ui';
 import _ from 'lodash';
 import moment from 'moment'
+import cstyles from './style'
 import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';
-import LineChart from '../D3/LineChart';
+import LineChart from '../../common/d3/LineChart';
+//import BubbleChart from '../../common/d3/BubbleChart';
 import MessageCard from './MessageCard';
 import InfoTab from './InfoTab'
 
@@ -51,6 +53,13 @@ class ResultContainer extends React.Component {
           y: d.confidenceNum };
       });
 
+        // var data = this.props.data.map(d => ({
+        //   _id: d._id,
+        //   value: d.value,
+        //   colorValue: d.sentiment,
+        //   selected: d.selected
+        // }));
+
       return (
         <Card style={styles.mainCard}>
           <Tabs>
@@ -58,11 +67,10 @@ class ResultContainer extends React.Component {
                 <InfoTab {...this.props} />
              </Tab>
              <Tab icon={<ChartIcon />} >
-               <div>
+               <div className="lineChart">
                    <LineChart
-                      className='visitors'
                       width={800}
-                      height={200}
+                      height={250}
                       data={lineData}
                     />
                </div>

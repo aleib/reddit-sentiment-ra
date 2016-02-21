@@ -1,8 +1,8 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import SearchTermStore from '../../stores/SearchTermStore';
-import Actions from '../../actions';
+import SearchTermStore from '../../../stores/SearchTermStore';
+import Actions from '../../../actions';
 import connectToStores from 'alt-utils/lib/connectToStores';
 
 class LimitDropDown extends React.Component {

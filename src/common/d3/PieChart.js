@@ -24,7 +24,7 @@ class PieChart extends React.Component {
 
     var labelArc = d3.svg.arc()
         .outerRadius(radius - 40)
-        .innerRadius(radius - 10);
+        .innerRadius(radius - 40);
 
     var pie = d3.layout.pie()
         .sort(null)

@@ -3,7 +3,7 @@ import mui from 'material-ui';
 import ListIcon from 'material-ui/lib/svg-icons/action/list';
 import LimitDropDown from './LimitDropDown';
 import FromDropDown from './FromDropDown';
-import theme from '../../common/theme-config';
+import theme from '../../../common/theme-config';
 
 var { ListItem } = mui;
 var themeColors = theme.palette;

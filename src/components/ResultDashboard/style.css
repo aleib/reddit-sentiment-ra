@@ -1,0 +1,30 @@
+:global(.lineChart .axis) {
+  path,
+  line {
+    fill: none;
+    stroke: #000;
+    /*shape-rendering: crispEdges;*/
+  }
+}
+
+:global(.lineChart .x.axis) {
+  path {
+    /*display: none;*/
+  }
+}
+
+:global(.lineChart .line) {
+   fill: none;
+   stroke: steelblue;
+   stroke-width: 1.5px;
+}
+
+:global(.arc) {
+  text {
+     font: 16px sans-serif;
+     text-anchor: middle;
+   }
+   path {
+     stroke: #fff;
+   }
+}

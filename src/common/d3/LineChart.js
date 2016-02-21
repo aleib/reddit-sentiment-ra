@@ -12,7 +12,7 @@ class LineChart extends React.Component {
   render () {
     const {width, height, data} = this.props
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 20, right: 20, bottom: 30, left: 70},
     newWidth = width - margin.left - margin.right,
     newHeight = height - margin.top - margin.bottom;
 
@@ -41,14 +41,6 @@ class LineChart extends React.Component {
      .append('g')
      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
-
-    // var parseDate = d3.time.format('%d-%b-%y').parse
-    //
-    //  data.forEach(function (d) {
-    //    d.x = parseDate(d.x)
-    //    d.y = +d.y
-    //  })
-
      x.domain(d3.extent(data, function (d) { return d.x }))
      y.domain(d3.extent(data, function (d) { return d.y }))
 
@@ -61,11 +53,11 @@ class LineChart extends React.Component {
      .attr('class', 'y axis')
      .call(yAxis)
      .append('text')
-     .attr('transform', 'rotate(-90)')
      .attr('y', 6)
      .attr('dy', '.71em')
      .style('text-anchor', 'end')
-     .text('Score')
+     .text('Confidence Score')
+     .attr('transform', 'translate(-60,0) rotate(-90)')
 
      svg.append('path')
      .datum(data)

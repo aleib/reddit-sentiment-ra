@@ -1,7 +1,7 @@
 {
-  "name": "essential-react",
-  "version": "0.4.0",
-  "description": "A minimal skeleton for building testable React apps using Babel",
+  "name": "Sentimental",
+  "version": "0.1.0",
+  "description": "Sentiment Analysis for Reddit Comments",
   "main": "src/main.js",
   "scripts": {
     "postinstall": "npm run build",
@@ -13,20 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pheuter/essential-react.git"
+    "url": "https://github.com/aleib/reddit-sentiment-ra"
   },
-  "keywords": [
-    "skeleton",
-    "template",
-    "react",
-    "quickstart"
-  ],
-  "author": "Mark Fayngersh",
+  "author": "Alex Leibhammer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pheuter/essential-react/issues"
+    "url": "https://github.com/aleib/reddit-sentiment-ra/issues"
   },
-  "homepage": "https://github.com/pheuter/essential-react",
+  "homepage": "https://github.com/aleib/reddit-sentiment-ra",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
     "ava": "^0.11.0",

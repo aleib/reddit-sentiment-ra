@@ -4,6 +4,7 @@ import _ from 'lodash';
 import moment from 'moment'
 import Colors from 'material-ui/lib/styles/colors';
 import PieChart from '../../../common/d3/PieChart'
+import DonutChart from '../../../common/d3/Donut3DChart'
 import theme from '../../../common/theme-config';
 import Actions from '../../../actions';
 
@@ -51,6 +52,12 @@ class ResultContainer extends React.Component {
     let pieData = [{label: "Positive", value: posPercent},{label: "Neutral", value: neuPercent},{label: "Negative", value: negPercent}];
     let colorRange = [Colors.lightGreenA700, Colors.grey300, Colors.red500];
 
+    //Simple Pie Chart
+    //<PieChart width={300} height={230} data={pieData} colorRange={colorRange} />
+
+    //3D Donut Chart
+    //<DonutChart width={300} height={200} />
+
     return (
       <div style={styles.infoDiv}>
           <div style={styles.innerInfoDiv}>
@@ -78,12 +85,7 @@ class ResultContainer extends React.Component {
             </List>
           </div>
           <div style={styles.pieDiv}>
-              <PieChart
-                 width={300}
-                 height={230}
-                 data={pieData}
-                 colorRange={colorRange}
-               />
+            <PieChart width={300} height={230} data={pieData} colorRange={colorRange} />
           </div>
       </div>
     );

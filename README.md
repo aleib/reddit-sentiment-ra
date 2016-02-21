@@ -46,10 +46,9 @@ Navigate to **http://localhost:8080/** to view the app.
     - Currently Reddit does not allow searching for a term in comments, only in posts/listings.
     - Used [https://api.pushshift.io](https://www.reddit.com/r/redditdev/comments/3zug2y/a_tool_for_searching_reddit_comments_and/) as it tracks latest comments.
 - Sentiment Analysis API:
-	- Currently using [vivekn/sentiment-web](https://github.com/vivekn/sentiment-web)
+	- Using [vivekn/sentiment-web](https://github.com/vivekn/sentiment-web)
 	- Using this API as it is free and allows batch processing
 	- Not necessarily accurate sentiment analysis, however meets the needs for the current project
 	- Addtional APIs to consider implementing at a later stage:
 		- [Alchemy API](http://www.alchemyapi.com/api/sentiment/textc.html): Free (limited use per day), but no batch processing  
        	- [TwinWord](https://www.twinword.com/index.php): Free, no batch processing
-    - Alternative option would be to implement sentiment analysis tool in project to run in the backend. Can have more control over training and accuracy.

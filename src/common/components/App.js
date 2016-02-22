@@ -1,5 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import ThemeConfig from '../theme-config';
 import IconButton from 'material-ui/lib/icon-button';

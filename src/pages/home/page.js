@@ -1,5 +1,3 @@
-import React from "react";
-import mui from 'material-ui';
 import SearchContainer from '../../components/Search/SearchContainer.js';
 import CommentList from '../../components/Comment/CommentList.js';
 import ResultContainer from '../../components/ResultDashboard/ResultContainer.js';

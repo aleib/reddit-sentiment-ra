@@ -1,6 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
-
 var {Card, CardHeader} = mui;
 
 class Listing extends React.Component {

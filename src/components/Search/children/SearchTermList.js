@@ -1,6 +1,4 @@
-import React from 'react';
 import SearchTerm from './SearchTerm.js';
-import mui from 'material-ui';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import SearchTermStore from '../../../stores/SearchTermStore';
 import HistoryIcon from 'material-ui/lib/svg-icons/action/history';

@@ -1,7 +1,4 @@
-import React from "react";
 import Actions from '../../actions';
-import _ from 'lodash';
-import mui from 'material-ui';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import SearchTermStore from '../../stores/SearchTermStore';
 import CommentStore from '../../stores/CommentStore';

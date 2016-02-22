@@ -1,7 +1,4 @@
-import React from 'react';
-import mui from 'material-ui';
 import Colors from 'material-ui/lib/styles/colors';
-import _ from 'lodash';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';
 import cstyles from "./style.css";

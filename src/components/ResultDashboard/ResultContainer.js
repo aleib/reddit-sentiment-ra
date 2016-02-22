@@ -1,7 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
-import _ from 'lodash';
-import moment from 'moment'
 import cstyles from './style'
 import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';

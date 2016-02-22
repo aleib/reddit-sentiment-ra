@@ -2,7 +2,6 @@ import alt from '../alt';
 import Actions from '../actions';
 import SearchTermSource from '../sources/SearchTermSource';
 import CommentSource from '../sources/CommentSource';
-import _ from 'lodash';
 
 class SearchTermStore {
   constructor(){

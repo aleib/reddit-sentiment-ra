@@ -1,8 +1,6 @@
 import alt from '../alt';
 import Actions from '../actions';
 import CommentSource from '../sources/CommentSource';
-import _ from 'lodash';
-import moment from 'moment';
 
 class CommentStore {
   constructor(){

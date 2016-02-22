@@ -35,7 +35,13 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new ExtractTextPlugin('style.css', { allChunks: true }),
+    new webpack.ProvidePlugin({
+      'React': 'react',
+      '_': 'lodash',
+      'mui': 'material-ui',
+      'moment': 'moment',
+    })
   ],
 
   // Transform source code using Babel and React Hot Loader

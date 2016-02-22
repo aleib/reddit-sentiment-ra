@@ -1,7 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
-import _ from 'lodash';
-import moment from 'moment'
 import Colors from 'material-ui/lib/styles/colors';
 import PieChart from '../../../common/d3/PieChart'
 import DonutChart from '../../../common/d3/Donut3DChart'

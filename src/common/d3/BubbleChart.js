@@ -1,4 +1,3 @@
-import React            from 'react';
 import ReactBubbleChart from 'react-bubble-chart';
 //import Actions          from '../Actions';
 

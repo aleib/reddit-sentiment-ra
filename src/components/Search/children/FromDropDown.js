@@ -1,4 +1,3 @@
-import React from 'react';
 import Actions from '../../../actions';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';

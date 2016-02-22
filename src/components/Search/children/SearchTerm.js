@@ -1,5 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
 import Actions from '../../../actions';
 import { Router, Route, Link, browserHistory } from 'react-router'
 

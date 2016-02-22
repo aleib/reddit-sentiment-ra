@@ -1,5 +1,3 @@
-import React from 'react';
-import mui from 'material-ui';
 import Colors from 'material-ui/lib/styles/colors';
 import Progress from '../../../common/components/Progress';
 import theme from '../../../common/theme-config';

@@ -1,10 +1,12 @@
 import cstyles from './style'
 import connectToStores from 'alt-utils/lib/connectToStores';
 import CommentStore from '../../stores/CommentStore';
-import LineChart from '../../common/d3/LineChart';
-//import BubbleChart from '../../common/d3/BubbleChart';
 import MessageCard from './Children/MessageCard';
 import InfoTab from './Children/InfoTab'
+
+//import LineChart from '../../common/d3/LineChart';
+//import BubbleChart from '../../common/d3/BubbleChart';
+import VictoryBarChart from '../../common/d3/VictoryBarChart';
 
 //Icons
 import InfoIcon from 'material-ui/lib/svg-icons/action/info-outline';
@@ -43,10 +45,16 @@ class ResultContainer extends React.Component {
         useProgress={false} />);
 
     if(!this.props.retrievingSentiment){
-      let lineData = _.map(this.props.comments, function square(d) {
+      let chartData = _.map(this.props.comments, function square(d) {
         return {
-          x: moment.unix(d.createdDate),
-          y: d.confidenceNum };
+          //x: moment.unix(d.createdDate).toDate(),
+          y: d.confidenceNum,
+          group: d.sentiment,
+        };
+      });
+
+      _(chartData).forEach(function(comment, index) {
+        comment.x = index;
       });
 
       //TODO: D3 Bubble Chart, need to implement different sentiment analysis to get word associations
@@ -60,11 +68,10 @@ class ResultContainer extends React.Component {
              </Tab>
              <Tab icon={<ChartIcon />} >
                <div className="lineChart">
-                  <div style={styles.testMsg}>Test D3 chart, not useful yet...</div>
-                   <LineChart
+                   <VictoryBarChart
                       width={800}
                       height={214}
-                      data={lineData}
+                      data={chartData}
                     />
                </div>
              </Tab>
